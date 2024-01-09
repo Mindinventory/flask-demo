@@ -1,6 +1,8 @@
-flask
-Flask-SQLAlchemy
-PyMySQL
-python-dotenv
-flask_cors
-Flask-Migrate
+flask==3.0.0
+Flask-SQLAlchemy==3.1.1
+PyMySQL==1.1.0
+python-dotenv==1.0.0
+flask_cors==4.0.0
+Flask-Migrate==4.0.5
+marshmallow==3.20.1
+bcrypt==4.1.2
