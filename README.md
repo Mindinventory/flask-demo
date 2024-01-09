@@ -23,31 +23,6 @@
 
 ## Project Structure
 ```
-├── app
-│   ├── api
-│   │   ├── __init__.py
-│   │   └── v1
-│   │       └── user
-│   │           ├── crud.py
-│   │           ├── endpoints.py
-│   │           ├── __init__.py
-│   │           ├── models.py
-│   │           └── schema.py
-│   ├── db
-│   │   └── session.py
-│   ├── general
-│   │   ├── hash_utils.py
-│   │   ├── helper.py
-│   │   ├── __init__.py
-│   │   ├── message.json
-│   │   └── response.py
-│   ├── __init__.py
-│   ├── models
-│   │   ├── __init__.py
-│   │   └── model.py
-│   └── routes
-│       ├── __init__.py
-│       └── route.py
 ├── config
 │   ├── config.py
 │   └── logger.py
@@ -56,8 +31,32 @@
 │   ├── env.py
 │   ├── README
 │   ├── script.py.mako
-│   └── versions
 ├── README.md
 ├── requirements.txt
-└── run.py
+├── run.py
+└── src
+    ├── api
+    │   ├── __init__.py
+    │   └── v1
+    │       └── user
+    │           ├── crud.py
+    │           ├── endpoints.py
+    │           ├── __init__.py
+    │           ├── models.py
+    │           └── schema.py
+    ├── db
+    │   └── session.py
+    ├── general
+    │   ├── hash_utils.py
+    │   ├── helper.py
+    │   ├── __init__.py
+    │   ├── message.json
+    │   └── response.py
+    ├── __init__.py
+    ├── models
+    │   ├── __init__.py
+    │   └── model.py
+    └── routes
+        ├── __init__.py
+        └── route.py
 ```

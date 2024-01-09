@@ -1,4 +1,4 @@
-from ..api.v1.user.endpoints import user as user_v1
+from src.api.v1.user.endpoints import user as user_v1
 
 
 def register_blueprints(app):
