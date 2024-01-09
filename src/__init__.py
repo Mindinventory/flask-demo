@@ -4,10 +4,10 @@ from flask_cors import CORS
 from werkzeug.exceptions import BadRequest
 from marshmallow import ValidationError
 
-from .routes.route import register_blueprints
-
+from src.routes.route import register_blueprints
 from config.config import Config
-from .db.session import db
+from src.db.session import db
+
 
 app = Flask(__name__)
 
@@ -19,7 +19,7 @@ db.init_app(app)
 migrate = Migrate(app, db, compare_type=True)
 
 # import models
-from .models import model
+from src.models import model
 
 # CORS
 CORS(app)

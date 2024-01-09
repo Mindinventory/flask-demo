@@ -1,11 +1,11 @@
 from flask import Blueprint, request, jsonify
 from marshmallow import ValidationError
 
-from . import schema 
-from . import crud
+from src.api.v1.user import schema
+from src.api.v1.user import crud
 from config.logger import logger
-from ....general.response import success_response, error_response, get_message
-from ....general.helper import getting_schema_error
+from src.general.response import success_response, error_response, get_message
+from src.general.helper import getting_schema_error
 
 user = Blueprint('user', __name__)
 

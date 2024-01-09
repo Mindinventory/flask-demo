@@ -1,6 +1,6 @@
-from .models import User
-from ....db.session import db
-from ....general.hash_utils import Hasher
+from src.api.v1.user.models import User
+from src.db.session import db
+from src.general.hash_utils import Hasher
 
 
 def create_user(input_data: dict):

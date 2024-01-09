@@ -27,7 +27,7 @@ def error_response(message, code=400):
 
 
 def get_message(path, data):
-    file_path = os.getcwd() + "/app/general/message.json"
+    file_path = os.getcwd() + "/src/general/message.json"
     with open(file_path, "r") as file:
         message = json.loads(file.read())
         return message[path][data]
