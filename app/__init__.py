@@ -1,12 +1,13 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, jsonify
 from flask_migrate import Migrate
 from flask_cors import CORS
+from werkzeug.exceptions import BadRequest
+from marshmallow import ValidationError
 
 from .routes.route import register_blueprints
 
 from config.config import Config
-
+from .db.session import db
 
 app = Flask(__name__)
 
@@ -14,7 +15,7 @@ app = Flask(__name__)
 app.config.from_object(Config)
 
 # Db connecation and migrations
-db = SQLAlchemy(app)
+db.init_app(app)
 migrate = Migrate(app, db, compare_type=True)
 
 # import models

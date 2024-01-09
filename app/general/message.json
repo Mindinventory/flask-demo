@@ -1,0 +1,8 @@
+{
+    "internal_server": {
+        "internal": "Internal server error"
+    },
+    "common_error": {
+        "user_not_exists": "User does not exists"
+    }
+}

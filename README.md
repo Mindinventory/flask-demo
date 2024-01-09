@@ -19,36 +19,45 @@
   - run ```flask db upgrade``` to apply migrations to the database
 
 ### Run Python server
-- python run.py or flask run
+- python run.py
 
 ## Project Structure
 ```
+├── app
+│   ├── api
+│   │   ├── __init__.py
+│   │   └── v1
+│   │       └── user
+│   │           ├── crud.py
+│   │           ├── endpoints.py
+│   │           ├── __init__.py
+│   │           ├── models.py
+│   │           └── schema.py
+│   ├── db
+│   │   └── session.py
+│   ├── general
+│   │   ├── hash_utils.py
+│   │   ├── helper.py
+│   │   ├── __init__.py
+│   │   ├── message.json
+│   │   └── response.py
+│   ├── __init__.py
+│   ├── models
+│   │   ├── __init__.py
+│   │   └── model.py
+│   └── routes
+│       ├── __init__.py
+│       └── route.py
 ├── config
-│   └── config.py
+│   ├── config.py
+│   └── logger.py
 ├── migrations
 │   ├── alembic.ini
 │   ├── env.py
 │   ├── README
 │   ├── script.py.mako
 │   └── versions
-│       └── 0ee6e1fd82ba_initial_migration.py
 ├── README.md
 ├── requirements.txt
-├── run.py
-└── src
-    ├── api
-    │   ├── __init__.py
-    │   └── v1
-    │       └── user
-    │           ├── endpoints.py
-    │           ├── __init__.py
-    │           └── models.py
-    ├── app.py
-    ├── __init__.py
-    ├── models
-    │   ├── __init__.py
-    │   └── model.py
-    └── routes
-        ├── __intit__.py
-        └── route.py
+└── run.py
 ```
