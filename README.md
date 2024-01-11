@@ -31,6 +31,7 @@
 │   ├── env.py
 │   ├── README
 │   ├── script.py.mako
+│   └── versions
 ├── README.md
 ├── requirements.txt
 ├── run.py
@@ -38,11 +39,18 @@
     ├── api
     │   ├── __init__.py
     │   └── v1
+    │       ├── auth
+    │       │   ├── controller.py
+    │       │   ├── crud.py
+    │       │   ├── __init__.py
+    │       │   ├── route.py
+    │       │   └── schema.py
     │       └── user
+    │           ├── controller.py
     │           ├── crud.py
-    │           ├── endpoints.py
     │           ├── __init__.py
     │           ├── models.py
+    │           ├── route.py
     │           └── schema.py
     ├── db
     │   └── session.py
@@ -51,7 +59,8 @@
     │   ├── helper.py
     │   ├── __init__.py
     │   ├── message.json
-    │   └── response.py
+    │   ├── response.py
+    │   └── token_utils.py
     ├── __init__.py
     ├── models
     │   ├── __init__.py

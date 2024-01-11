@@ -1,12 +1,11 @@
-from flask import Flask, jsonify
+from flask import Flask
 from flask_migrate import Migrate
 from flask_cors import CORS
-from werkzeug.exceptions import BadRequest
-from marshmallow import ValidationError
+from flask_jwt_extended import JWTManager
 
-from src.routes.route import register_blueprints
 from config.config import Config
 from src.db.session import db
+from src.routes.route import register_blueprints
 
 
 app = Flask(__name__)
@@ -17,6 +16,9 @@ app.config.from_object(Config)
 # Db connecation and migrations
 db.init_app(app)
 migrate = Migrate(app, db, compare_type=True)
+
+# JWT
+jwt = JWTManager(app)
 
 # import models
 from src.models import model
