@@ -4,7 +4,7 @@ from flask import jsonify
 from config.logger import logger
 
 
-def success_response(data=None, message=None, extra={}, code=200):
+def success_response(data=None, message=None, code=200, **extra):
     logger.info(message)
     return {
         "data": data,
