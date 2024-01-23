@@ -5,4 +5,4 @@ __pycache__/
 .env
 venv
 migrations/versions/*
-!migrations/versions
+!migrations/versions/.gitkeep
