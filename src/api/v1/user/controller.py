@@ -3,8 +3,8 @@ from marshmallow import ValidationError
 
 from src.api.v1.user import schema, crud
 from config.logger import logger
-from src.general.response import success_response, error_response, get_message
-from src.general.helper import getting_schema_error
+from src.utils.response import success_response, error_response, get_message
+from src.utils.helper import getting_schema_error
 
 
 def get_user_info(user_id):

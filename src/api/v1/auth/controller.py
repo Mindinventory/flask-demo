@@ -5,10 +5,10 @@ from marshmallow import ValidationError
 from src.api.v1.auth import schema, crud
 from src.api.v1.user import crud as user_crud
 from config.logger import logger
-from src.general.response import success_response, error_response, get_message
-from src.general.helper import getting_schema_error
-from src.general.hash_utils import Hasher
-from src.general.token_utils import Token
+from src.utils.response import success_response, error_response, get_message
+from src.utils.helper import getting_schema_error
+from src.utils.hash_utils import Hasher
+from src.utils.token_utils import Token
 
 
 def login():

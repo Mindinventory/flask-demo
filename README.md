@@ -13,13 +13,18 @@
 - Visual Studio
 - phpmyadmin, Adminer : For Sql
 
+### Setup .env file
+- Add .env file and take a example from the .env.example
+
+### Run Python server
+- flask run or python run.py
+
+
 ### Setting up
 * To create tables in database:
   - run ```flask db migrate -m "Initial migration."``` to generate initial migrations. 
   - run ```flask db upgrade``` to apply migrations to the database
 
-### Run Python server
-- python run.py
 
 ## Project Structure
 ```
@@ -53,19 +58,18 @@
     │           ├── route.py
     │           └── schema.py
     ├── db
+    │   ├── __init__.py
+    │   ├── model.py
     │   └── session.py
-    ├── general
-    │   ├── hash_utils.py
-    │   ├── helper.py
-    │   ├── __init__.py
-    │   ├── message.json
-    │   ├── response.py
-    │   └── token_utils.py
     ├── __init__.py
-    ├── models
+    ├── routes
     │   ├── __init__.py
-    │   └── model.py
-    └── routes
+    │   └── route.py
+    └── utils
+        ├── hash_utils.py
+        ├── helper.py
         ├── __init__.py
-        └── route.py
+        ├── message.json
+        ├── response.py
+        └── token_utils.py
 ```

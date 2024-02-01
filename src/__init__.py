@@ -21,7 +21,7 @@ migrate = Migrate(app, db, compare_type=True)
 jwt = JWTManager(app)
 
 # import models
-from src.models import model
+from src.db import model
 
 # CORS
 CORS(app)
